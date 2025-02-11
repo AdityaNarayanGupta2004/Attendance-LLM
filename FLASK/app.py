@@ -399,7 +399,7 @@ def teacher_portal():
 def student_portal():
     # Retrieve user details from session
     session.permanent = True 
-    print(session);
+    print(session)
     student_name = session.get("student_name")
     student_roll = session.get("student_roll")
 
@@ -420,18 +420,18 @@ def get_data_from_db(table_name):
     # Query the database (adjust this query to your table structure)
     cursor.execute(f'SELECT * FROM {table_name}')
     rows = cursor.fetchall()  # Fetch all results
-    print("sending");
+    print("sending")
     conn.close()
     return rows
 
-table_name="";
-print(table_name+"show");
+table_name=""
+print(table_name+"show")
 
 @app.route('/faculty')
 def index():
     # Get data from the database
     data=get_data_from_db(table_name)
-    print(data);
+    print(data)
     
     # Pass the data to the template
     return render_template('attendanceFaculty.html', data=data)
