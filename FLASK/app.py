@@ -467,5 +467,5 @@ def validate_otp():
         return jsonify({"valid": False})
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
